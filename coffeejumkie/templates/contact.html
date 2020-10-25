@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact
+    </title>
+</head>
+
+<body>
+    <img src="{% static '/images/logo.png' %}" id="logo" alt="cofee_logo">
+    <h3>Coffee Junkie</h3>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="numbers">Numbers</a></li>
+        <li><a href="contact">Contact</a></li>
+    </ul>
+    <img src="{% static 'images/background.jpg' %}" width="100%" alt="cofee beans">
+    <br>
+    <h1>Contact Us</h1>
+    <form action="">
+        <!-- name -->
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+        <br>
+        <br>
+        <!-- email -->
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <br>
+        <br>
+        <!-- description -->
+        <label for="description">Description</label>
+        <br>
+        <textarea 
+        name="description"
+         id="name"
+         cols="30"
+         rows="10"
+         >
+        </textarea>
+        <br>
+        <br>
+        <input type="submit">
+    </form>
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>copyright&copy;2020</p>
+    <a href="#logo">Back to top</a>
+</body>
+
+</html>
