@@ -1,4 +1,6 @@
 {% load static %}
+{% static "images" as baseUrl %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,37 +23,23 @@
     <h1>Featured products</h1>
     <br>
     <br>
-    <br>        <!-- house blend -->
-        <h2>Frappuccino</h2>
-        <img src="{% static './images/houseblend.jpeg' %}" alt="house blend">
-        <p style="width: 50%">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ullam impedit eligendi rerum maxime in alias error sint rem magnam quod iure eveniet non, ex asperiores veniam quasi. Omnis, ex?Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo provident molestias ipsam. Corrupti ab dolor obcaecati impedit? Aperiam, culpa tenetur distinctio expedita doloremque quam, nam labore nemo qui quis explicabo!
-            
+    <br>  
+    
+    <!-- house blend -->
+    {% for pro in pros %}
+        <h2>{{pro.name}}</h2>
+        <img src="{{pro.img.url}}" alt="house blend">
+        <p style="width: 50%">{{pro.desc}}
         </p> 
         <h3><a href="https://en.wikipedia.org/wiki/Frappuccino" target="blank">Details</a></h3>
         <br>
         <br>
-         <!-- french Roast -->
-        <h2>French Roast</h2>
-        <img src="{% static 'images/specialmachine.jpeg' %}" alt="french rost">
-        <p style="width: 50%">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ullam impedit eligendi rerum maxime
-            in alias error sint rem magnam quod iure eveniet non, ex asperiores veniam quasi. Omnis, ex?Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Illo provident molestias ipsam. Corrupti ab dolor obcaecati impedit? Aperiam,
-            culpa tenetur distinctio expedita doloremque quam, nam labore nemo qui quis explicabo!
-        
-        </p>
-        <h3><a href="https://en.wikipedia.org/wiki/Coffee_roasting" target="blank">Details</a></h3>
-        <br>
-        <br>
-        <!-- colombian -->
-        <h2>Colombian roast</h2>
-        <img src="{% static 'images/colombian.jpeg' %}" alt="french rost">
-        <p style="width: 50%">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ullam impedit eligendi rerum maxime
-            in alias error sint rem magnam quod iure eveniet non, ex asperiores veniam quasi. Omnis, ex?Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Illo provident molestias ipsam. Corrupti ab dolor obcaecati impedit? Aperiam,
-            culpa tenetur distinctio expedita doloremque quam, nam labore nemo qui quis explicabo!
-        
-        </p>
-        <h3><a href="https://en.wikipedia.org/wiki/Coffee_roasting" target="blank">Details</a></h3>
+    {% endfor %}
+
+
+
+
+
 
         <br>
         <br>
